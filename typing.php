@@ -10,13 +10,15 @@
 		
 		<h2>paste your favorite words here</h2>
 		
-		<br>
-		<input type="text">
-		</br>
-		<br>
-		<input type="button" value="start">
-		</br>
-		
+		<form method="post">
+			<input type="text" name="text" maxlength="1000">
+			<input type="submit" value="start">
+		</form>
+		<?php
+			if(isset($_POST['text'])){
+				$text = $_POST['text'];
+				echo $text;
+			}
+		?>
 	</body>
 </html>
-
